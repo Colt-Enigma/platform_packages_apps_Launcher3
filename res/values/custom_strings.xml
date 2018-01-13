@@ -51,4 +51,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_size_large">Large (+10%)</string>
     <string name="icon_size_extra_large">Extra large (+25%)</string>
 
+    <!-- Google Feed -->
+    <string name="settings_feed">Enable Google feed integration</string>
+
 </resources>
