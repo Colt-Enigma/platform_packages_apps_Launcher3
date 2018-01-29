@@ -5,5 +5,5 @@ import android.content.Context;
 
 public interface AppFilter {
 
-    boolean shouldShowApp(String packageName, Context context);
+    boolean shouldShowApp(String packageName, Context context, boolean isWidgetPanel);
 }
