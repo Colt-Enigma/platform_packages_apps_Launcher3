@@ -37,6 +37,7 @@ import com.android.internal.util.colt.ColtUtils;
 public class Homescreen extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
     static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
+    static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
 
     @Override
     protected void onCreate(final Bundle bundle) {
@@ -122,6 +123,18 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
                     int index = hotseatColumns.findIndexOfValue((String) newValue);
                     hotseatColumns.setSummary(hotseatColumns.getEntries()[index]);
                     LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+
+	    final ListPreference mThemeStyle = (ListPreference) findPreference(PREF_THEME_STYLE_KEY);
+	    mThemeStyle.setSummary(mThemeStyle.getEntry());
+            mThemeStyle.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                @Override
+                public boolean onPreferenceChange(Preference preference, Object o) {
+                    String newValue = (String) o;
+                    int valueIndex = mThemeStyle.findIndexOfValue(newValue);
+                    mThemeStyle.setSummary(mThemeStyle.getEntries()[valueIndex]);
                     return true;
                 }
             });

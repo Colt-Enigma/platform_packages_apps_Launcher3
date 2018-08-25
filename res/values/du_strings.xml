@@ -105,4 +105,9 @@
     <string name="lock_desktop_summary">Prevent the homescreen from being modified</string>
     <string name="lock_desktop_toast">Desktop is locked. Unlock it to proceed.</string>
 
+    <string name="theme_style_title">Theme style</string>
+    <string name="theme_style_auto">Wallpaper based</string>
+    <string name="theme_style_light">Light style</string>
+    <string name="theme_style_dark">Dark style</string>
+
 </resources>
