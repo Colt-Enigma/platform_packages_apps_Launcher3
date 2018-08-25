@@ -97,4 +97,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="show_searchbar_title">Show search bar</string>
     <string name="show_searchbar_summary">Show the search bar on the home screen</string>
 
+    <string name="theme_style_title">Theme style</string>
+    <string name="theme_style_auto">Wallpaper based</string>
+    <string name="theme_style_light">Light style</string>
+    <string name="theme_style_dark">Dark style</string>
+
 </resources>
