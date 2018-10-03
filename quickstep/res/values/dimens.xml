@@ -18,8 +18,8 @@
 
     <dimen name="task_thumbnail_top_margin">24dp</dimen>
     <dimen name="task_thumbnail_icon_size">48dp</dimen>
-    <dimen name="task_menu_background_radius">12dp</dimen>
-    <dimen name="task_corner_radius">2dp</dimen>
+    <dimen name="task_menu_background_radius">8dp</dimen>
+    <dimen name="task_corner_radius">8dp</dimen>
     <dimen name="recents_page_spacing">10dp</dimen>
     <dimen name="quickscrub_adjacent_visible_width">20dp</dimen>
 
@@ -51,5 +51,5 @@
     <!-- Width of the space behind the last task in Overview. In the center of it, there is "Clear all" button. -->
     <dimen name="clear_all_container_width">168dp</dimen>
 
-    <dimen name="shelf_surface_radius">16dp</dimen>
+    <dimen name="shelf_surface_radius">8dp</dimen>
 </resources>
