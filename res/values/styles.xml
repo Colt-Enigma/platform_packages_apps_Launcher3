@@ -34,7 +34,7 @@
         <item name="android:textColorHint">#A0000000</item>
         <item name="android:colorControlHighlight">#A0000000</item>
         <item name="android:colorPrimary">#fff</item>
-        <item name="allAppsScrimColor">#EAFFFFFF</item>
+        <item name="allAppsScrimColor">#A6FFFFFF</item>
         <item name="allAppsInterimScrimAlpha">46</item>
         <item name="allAppsNavBarScrimColor">#66FFFFFF</item>
         <item name="popupColorPrimary">#FFF</item>
@@ -69,7 +69,7 @@
         <item name="android:textColorHint">#A0FFFFFF</item>
         <item name="android:colorControlHighlight">#A0FFFFFF</item>
         <item name="android:colorPrimary">#FF212121</item>
-        <item name="allAppsScrimColor">#EA212121</item>
+        <item name="allAppsScrimColor">#A6212121</item>
         <item name="allAppsInterimScrimAlpha">102</item>
         <item name="allAppsNavBarScrimColor">#80000000</item>
         <item name="popupColorPrimary">?android:attr/colorPrimary</item>
