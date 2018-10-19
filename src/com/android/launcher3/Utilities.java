@@ -16,6 +16,7 @@
 
 package com.android.launcher3;
 
+import android.app.ProgressDialog;
 import android.app.WallpaperManager;
 import android.content.ComponentName;
 import android.content.Context;
