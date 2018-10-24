@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
-* Copyright (C) 2020 ColtOS Project
+* Copyright (C) 2020 The ColtOS Project
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -40,5 +40,6 @@
     <string name="show_searchbar_summary">Show the search bar on the home screen</string>
 
     <!-- Google Feed -->
-    <string name="settings_feed">Enable Google feed integration</string>
+    <string name="google_feed_title">Display Google app</string>
+    <string name="google_feed_summary">To the left of the main home screen</string>
 </resources>
