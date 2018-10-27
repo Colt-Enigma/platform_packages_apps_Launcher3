@@ -85,7 +85,6 @@ public class SettingsActivity extends Activity {
     public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
     private static final long WAIT_BEFORE_RESTART = 250;
     static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
-    public static boolean restartNeeded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,14 +122,6 @@ public class SettingsActivity extends Activity {
 
             getPreferenceManager().setSharedPreferencesName(LauncherFiles.SHARED_PREFERENCES_KEY);
             addPreferencesFromResource(R.xml.launcher_preferences);
-
-            HomeKeyWatcher mHomeKeyListener = new HomeKeyWatcher(getActivity());
-            mHomeKeyListener.setOnHomePressedListener(() -> {
-                if (restartNeeded) {
-                    ExtraUtils.restart(getActivity());
-                }
-            });
-            mHomeKeyListener.startWatch();
 
             ContentResolver resolver = getActivity().getContentResolver();
 
@@ -192,7 +183,7 @@ public class SettingsActivity extends Activity {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = gridColumns.findIndexOfValue((String) newValue);
                     gridColumns.setSummary(gridColumns.getEntries()[index]);
-                    restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -203,7 +194,7 @@ public class SettingsActivity extends Activity {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = gridRows.findIndexOfValue((String) newValue);
                     gridRows.setSummary(gridRows.getEntries()[index]);
-                    restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
                     return true;
                 }
             });
@@ -214,31 +205,31 @@ public class SettingsActivity extends Activity {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     int index = hotseatColumns.findIndexOfValue((String) newValue);
                     hotseatColumns.setSummary(hotseatColumns.getEntries()[index]);
-                    restartNeeded = true;
-                    return true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+		    return true;
                 }
             });
 
             SwitchPreference desktopShowLabel = (SwitchPreference) findPreference(Utilities.DESKTOP_SHOW_LABEL);
 	    desktopShowLabel.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                   restartNeeded = true;
-	           return true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+	            return true;
 	        }
 	    });
 
             SwitchPreference allAppsShowLabel = (SwitchPreference) findPreference(Utilities.ALLAPPS_SHOW_LABEL);
 	    allAppsShowLabel.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
 		public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    restartNeeded = true;
- 		    return true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+		    return true;
 		}
 	    });
 
             final ListPreference iconSizes = (ListPreference) findPreference(Utilities.ICON_SIZE);
             iconSizes.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    restartNeeded = true;
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
 		    return true;
                 }
             });
@@ -317,10 +308,10 @@ public class SettingsActivity extends Activity {
                 mIconBadgingObserver.unregister();
                 mIconBadgingObserver = null;
             }
-            super.onDestroy();
-            if (restartNeeded) {
-                ExtraUtils.restart(getActivity());
-            }
+            // if we don't press the home button but the back button to close Settings,
+            // then we must force a restart because the home button watcher wouldn't trigger it
+             LauncherAppState.getInstanceNoCreate().checkIfRestartNeeded();
+  	     super.onDestroy();
         }
 
         @TargetApi(Build.VERSION_CODES.O)
