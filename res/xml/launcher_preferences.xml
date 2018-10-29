@@ -113,9 +113,19 @@
             />
     </PreferenceCategory>
 
+    <Preference
+        android:key="gestures"
+        android:title="@string/gestures_category_title"
+	android:summary="@string/gestures_category_summary">
+        <intent
+            android:action="android.settings.APPLICATION_DETAILS_SETTINGS"
+            android:targetPackage="com.android.launcher3"
+            android:targetClass="com.android.launcher3.Gestures" />
+    </Preference>
+
     <PreferenceCategory
         android:key="others_category"
-        android:title="@string/icon_category_title">
+        android:title="@string/others_category_title">
 
         <SwitchPreference
             android:defaultValue="true"
@@ -128,13 +138,6 @@
             android:title="@string/allow_rotation_title"
             android:summary="@string/allow_rotation_desc"
             android:defaultValue="@bool/allow_rotation"
-            android:persistent="true" />
-
-        <SwitchPreference
-            android:key="pref_allowSwipeDownClearAll"
-            android:title="@string/allow_swipe_down_clearall_title"
-            android:summary="@string/allow_swipe_down_clearall_desc"
-            android:defaultValue="@bool/allow_swipe_down_clearall"
             android:persistent="true" />
 
         <ListPreference
