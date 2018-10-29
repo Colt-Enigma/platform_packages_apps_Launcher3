@@ -58,4 +58,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <string name="icon_category_title">Icon Settings</string>
     <string name="others_category_title">Misc. Settings</string>
 
+    <!-- Double Tap Gestures -->
+    <string name="gestures_category_title">Gestures</string>
+    <string name="gestures_category_summary">Homescreen gesture preference</string>
+    <string name="pref_homescreen_dt_gestures_title">Double tap gesture</string>
+    <string name="pref_homescreen_dt_gestures_summary">Select the action of the double tap gesture on the home screen</string>
+    <string name="pref_homescreen_dt_gestures_none">None</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Sleep</string>
+    <string name="pref_homescreen_dt_gestures_torch">Flashlight</string>
+
 </resources>
