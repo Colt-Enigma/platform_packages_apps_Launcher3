@@ -27,7 +27,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Grid -->
     <string name="num_default">Default</string>
-    <string name="grid_category_title">Columns and rows</string>
+    <string name="grid_category_title">Grid Settings</string>
     <string name="number_of_columns_title">Grid and app drawer columns</string>
     <string name="number_of_rows_title">Grid and app drawer rows</string>
     <string name="number_of_hotseat_title">Homescreen quicklaunch icons</string>
@@ -53,5 +53,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <!-- Google Feed -->
     <string name="settings_feed">Enable Google feed integration</string>
+
+    <!-- Bring Uniformity -->
+    <string name="icon_category_title">Icon Settings</string>
+    <string name="others_category_title">Misc. Settings</string>
 
 </resources>
