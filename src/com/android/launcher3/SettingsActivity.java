@@ -75,6 +75,7 @@ public class SettingsActivity extends Activity {
     public static final String NOTIFICATION_BADGING = "notification_badging";
     /** Hidden field Settings.Secure.ENABLED_NOTIFICATION_LISTENERS */
     private static final String NOTIFICATION_ENABLED_LISTENERS = "enabled_notification_listeners";
+    private static final String HIDDEN_APPS = "hidden_app";
 
     private static final String EXTRA_FRAGMENT_ARG_KEY = ":settings:fragment_args_key";
     private static final String EXTRA_SHOW_FRAGMENT_ARGS = ":settings:show_fragment_args";
@@ -240,6 +241,13 @@ public class SettingsActivity extends Activity {
                     restartNeeded = true;
 		    return true;
                 }
+            });
+
+            Preference hiddenApp = findPreference(Utilities.KEY_HIDDEN_APPS);
+            hiddenApp.setOnPreferenceClickListener(
+                preference -> {
+                    startActivity(new Intent(getActivity(), HiddenAppsActivity.class));
+                    return false;
             });
         }
 
