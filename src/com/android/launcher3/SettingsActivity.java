@@ -85,6 +85,7 @@ public class SettingsActivity extends Activity {
     public static final String PREF_THEME_STYLE_KEY = "pref_theme_style";
     private static final long WAIT_BEFORE_RESTART = 250;
     static final String KEY_FEED_INTEGRATION = "pref_feed_integration";
+    static final String KEY_SHOW_SEARCHBAR = "pref_show_searchbar";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,9 +143,14 @@ public class SettingsActivity extends Activity {
 
             SwitchPreference feedIntegration = (SwitchPreference)
                     findPreference(KEY_FEED_INTEGRATION);
-            if (!hasPackageInstalled(LauncherTab.SEARCH_PACKAGE)) {
+
+            SwitchPreference showSearchBar = (SwitchPreference)
+		    findPreference(KEY_SHOW_SEARCHBAR);
+
+	    if (!hasPackageInstalled(LauncherTab.SEARCH_PACKAGE)) {
                 getPreferenceScreen().removePreference(feedIntegration);
-            }
+                getPreferenceScreen().removePreference(showSearchBar);
+	    }
 
             Preference iconShapeOverride = findPreference(IconShapeOverride.KEY_PREFERENCE);
             if (iconShapeOverride != null) {
@@ -240,7 +246,14 @@ public class SettingsActivity extends Activity {
                     startActivity(new Intent(getActivity(), HiddenAppsActivity.class));
                     return false;
             });
-        }
+
+            showSearchBar.setOnPreferenceChangeListener(new OnPreferenceChangeListener() {
+                 public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    LauncherAppState.getInstanceNoCreate().setNeedsRestart();
+                    return true;
+                }
+            });
+	}
 
         @Override
         public void onSaveInstanceState(Bundle outState) {
