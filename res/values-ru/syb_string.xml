@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- General -->
+    <string name="settings_title">Настройки</string>
+
+    <!-- Categories -->
+    <string name="home_category_title">Домашний экран</string>
+    <string name="home_category_summary">Панель Google now и прочее</string>
+    <string name="icons_category_title">Иконки</string>
+    <string name="icons_category_summary">Изменить форму, размер иконок и прочее</string>
+    <string name="app_drawer_category_title">Меню приложений</string>
+    <string name="app_drawer_category_summary">Насктройка меню приложений</string>
+    <string name="gestures_category_title">Жесты</string>
+    <string name="gestures_category_summary"></string>
+
+    <!-- Sub categories -->
+    <string name="home_grid_title">Столбцы и строки</string>
+    <string name="icon_layout_title">Расположение иконок</string>
+
+    <string name="theme_style_title">Стиль темы</string>
+    <string name="theme_style_auto">На основе обоев</string>
+    <string name="theme_style_light">Светлая</string>
+    <string name="theme_style_dark">Темная</string>
+
+    <string name="left_tab_label">Вкладка Google Now</string>
+    <string name="left_tab_description">Включение интеграции Google Now</string>
+
+
+    <!-- grid -->
+    <string name="num_default">По умолчанию</string>
+    <string name="grid_category_title">Столбцы и строки</string>
+    <string name="number_of_columns_title">Количество столбцов</string>
+    <string name="number_of_rows_title">Количество строк</string>
+    <string name="number_of_hotseat_title">Иконки быстрого запуска рабочего стола</string>
+    <string name="state_loading">Применение\u2026</string>
+
+    <!-- Icon shape -->
+    <string name="icon_shape_override_label_custom">Форма иконок</string>
+    <string name="icon_shape_rounded_square">Квадрат с закруглёнными углами</string>
+
+    <!-- Icon packs -->
+    <string name="icon_pack">Набор иконок</string>
+    <string name="icon_pack_summary">Выберите набор иконок</string>
+
+    <!-- Icon Size -->
+    <string name="icon_size_title">Размер иконок</string>
+    <string name="icon_size_extra_small">Очень маленький</string>
+    <string name="icon_size_small">Маленький</string>
+    <string name="icon_size_average">Средний</string>
+    <string name="icon_size_large">Большой</string>
+    <string name="icon_size_extra_large">Очень большой</string>
+
+    <!-- Hidden apps -->
+    <string name="customize">Настройка</string>
+    <string name="hide_app">Скрыть приложения</string>
+    <string name="hide_app_sum">Скрыть приложения из списка</string>
+    <string name="hide_app_selected">&#160;выбрано</string>
+    <string name="hidden_app">Скрытые приложения</string>
+    <string name="hide_selected">Скрыть выбранные приложения</string>
+    <string name="more">Больше</string>
+    <string name="reset_hidden_apps">Сбросить все</string>
+    <string name="reset_hidden_apps_done">Скрытые приложения теперь доступны</string>
+
+    <!-- Gestures -->
+    <string name="allow_swipe_down_clearall_title">Закрыть все недавние приложения</string>
+    <string name="allow_swipe_down_clearall_desc">Вертикальный свайп вниз в Недавних для закрытия всех приложений</string>
+    <string name="pref_homescreen_dt_gestures_title">Жест двойного нажатия</string>
+    <string name="pref_homescreen_dt_gestures_summary">Выберите действие для жеста двойного нажатия на рабочем столе</string>
+    <string name="pref_homescreen_dt_gestures_none">Нет</string>
+    <string name="pref_homescreen_dt_gestures_sleep">Сон</string>
+    <string name="pref_homescreen_dt_gestures_torch">Фонарик</string>
+    <string name="pref_notifications_gesture_title">Жесты уведомлений</string>
+    <string name="pref_notifications_gesture_summary">Вертикальный свайп вниз на главном экране чтобы открыть панель быстрых настроек</string>
+
+    <!-- Icon mask -->
+    <string name="legacy_icon_mask_title">Заменить устаревшие иконки</string>
+    <string name="legacy_icon_mask_summary">Возможны проблемы со сторонним набором иконок</string>
+
+    <!-- Show searchbar -->
+    <string name="show_searchbar_title">Панель поиска</string>
+    <string name="show_searchbar_summary">Отображать панель поиска Google на домашнем экране</string>
+
+    <!-- Google Feed -->
+    <string name="google_feed_title">Панель Google Feed</string>
+    <string name="google_feed_summary">Отображать слева от главного экрана</string>
+
+    <!-- Show labels on icon -->
+    <string name="app_show_label_title">Заголовки приложений</string>
+    <string name="desktop_show_label_summary">Отображать заголовки приложений на домашнем экране</string>
+    <string name="allapps_show_label_summary">Отображать заголовки приложений в меню приложений</string>
+
+
+</resources>

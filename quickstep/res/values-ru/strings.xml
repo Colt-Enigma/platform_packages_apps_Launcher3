@@ -26,4 +26,9 @@
     <string name="accessibility_close_task" msgid="5354563209433803643">"Закрыть"</string>
     <string name="recents_clear_all" msgid="5328176793634888831">"Очистить все"</string>
     <string name="accessibility_recent_apps" msgid="4058661986695117371">"Недавние приложения"</string>
+    
+    <!-- Kill action -->
+    <string name="recent_task_option_kill_app">Закрыть</string>
+    <string name="recents_app_killed">Приложение закрыто</string>
+    
 </resources>
