@@ -107,4 +107,8 @@
     <string name="date_style_body_font" translatable="false">@*android:string/config_bodyFontFamily</string>
     <string name="date_style_font_google" translatable="false">Google Sans</string>
 
+    <!-- At a glance uppercase -->
+    <string name="date_style_transform_title">Show uppercase on date</string>
+    <string name="date_style_transform_summary">Transform all the date/at a glance with uppercased text</string>
+
 </resources>
