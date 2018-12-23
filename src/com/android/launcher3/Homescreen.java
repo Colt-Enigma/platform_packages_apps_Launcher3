@@ -32,7 +32,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.SwitchPreference;
 import android.view.MenuItem;
 
-import com.android.internal.util.syberia.SyberiaUtils;
+import com.android.internal.util.colt.ColtUtils;
 
 public class Homescreen extends SettingsActivity implements PreferenceFragment.OnPreferenceStartFragmentCallback {
 
@@ -84,7 +84,7 @@ public class Homescreen extends SettingsActivity implements PreferenceFragment.O
             SwitchPreference showSearchBar = (SwitchPreference)
                     findPreference(KEY_SHOW_SEARCHBAR);
 
-            if (!SyberiaUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
+            if (!ColtUtils.isPackageInstalled(mContext, LauncherTab.SEARCH_PACKAGE)) {
                 getPreferenceScreen().removePreference(feedIntegration);
                 getPreferenceScreen().removePreference(showSearchBar);
             }
