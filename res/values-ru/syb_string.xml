@@ -46,11 +46,6 @@
 
     <!-- Icon Size -->
     <string name="icon_size_title">Размер иконок</string>
-    <string name="icon_size_extra_small">Очень маленький</string>
-    <string name="icon_size_small">Маленький</string>
-    <string name="icon_size_average">Средний</string>
-    <string name="icon_size_large">Большой</string>
-    <string name="icon_size_extra_large">Очень большой</string>
 
     <!-- Hidden apps -->
     <string name="customize">Настройка</string>
