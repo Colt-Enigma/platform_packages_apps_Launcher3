@@ -27,7 +27,6 @@ import android.os.UserHandle;
 import android.util.LruCache;
 import android.util.SparseArray;
 
-import com.android.internal.icons.IconsHandler;
 import com.android.launcher3.FastBitmapDrawable;
 import com.android.launcher3.graphics.BitmapInfo;
 import com.android.launcher3.graphics.DrawableFactory;
@@ -46,8 +45,8 @@ public class NormalizedIconLoader extends IconLoader {
     private LauncherIcons mLauncherIcons;
 
     public NormalizedIconLoader(Context context, TaskKeyLruCache<Drawable> iconCache,
-            LruCache<ComponentName, ActivityInfo> activityInfoCache, IconsHandler ih) {
-        super(context, iconCache, activityInfoCache, ih);
+            LruCache<ComponentName, ActivityInfo> activityInfoCache) {
+        super(context, iconCache, activityInfoCache);
         mDrawableFactory = DrawableFactory.get(context);
     }
 

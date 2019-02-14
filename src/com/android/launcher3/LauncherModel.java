@@ -687,10 +687,6 @@ public class LauncherModel extends BroadcastReceiver
         mIconCache.clearIconCache();
     }
 
-    public void setIconPack() {
-        mIconCache.setIconPack();
-    }
-
     public static void setWorkerPriority(final int priority) {
         Process.setThreadPriority(sWorkerThread.getThreadId(), priority);
     }
