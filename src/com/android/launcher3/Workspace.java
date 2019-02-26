@@ -58,7 +58,7 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Toast;
 
-import com.android.internal.util.syberia.SyberiaUtils;
+import com.android.internal.util.colt.ColtUtils;
 
 import com.android.launcher3.Launcher.LauncherOverlay;
 import com.android.launcher3.LauncherAppWidgetHost.ProviderChangedListener;
@@ -328,11 +328,11 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
                 break;
             // Sleep
             case 1:
-                SyberiaUtils.switchScreenOff(getContext());
+                ColtUtils.switchScreenOff(getContext());
                 break;
             // Flashlight
             case 2:
-                SyberiaUtils.toggleCameraFlash();
+                ColtUtils.toggleCameraFlash();
                 break;
 	    // Google search
             case 3:
@@ -3549,7 +3549,7 @@ public class Workspace extends PagedView<WorkspacePageIndicator>
         launchIntent.setPackage("com.google.android.googlequicksearchbox");
         launchIntent.setClassName("com.google.android.googlequicksearchbox",
                 "com.google.android.googlequicksearchbox.SearchActivity");
-        if (SyberiaUtils.isPackageInstalled(context,
+        if (ColtUtils.isPackageInstalled(context,
                 "com.google.android.googlequicksearchbox")) {
             context.startActivity(launchIntent);
         } else {
