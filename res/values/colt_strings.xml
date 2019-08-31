@@ -125,4 +125,8 @@
     <string name="date_style_spacing_aesthetic" translatable="false">A e s t h e t i c</string>
     <string name="date_style_spacing_ott">Over the top</string>
 
+    <!-- Quickspace Now Playing -->
+    <string name="quickspace_now_playing_title">Show now playing</string>
+    <string name="quickspace_now_playing_summary">Shows the song you\'re playing on At a Glance. WARNING: It\'s not fully compatible with all media players!</string>
+
 </resources>
