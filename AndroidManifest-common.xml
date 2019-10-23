@@ -78,13 +78,12 @@
         android:fullBackupOnly="true"
         android:fullBackupContent="@xml/backupscheme"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+	android:icon="@mipmap/ic_launcher_home"
         android:label="@string/derived_app_name"
         android:largeHeap="@bool/config_largeHeap"
         android:restoreAnyVersion="true"
         android:supportsRtl="true"
-        tools:ignore="GoogleAppIndexingWarning"
-        tools:replace="android:icon" >
+        tools:ignore="GoogleAppIndexingWarning" >
 
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
