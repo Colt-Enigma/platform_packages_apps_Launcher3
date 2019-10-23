@@ -40,7 +40,7 @@ import com.android.launcher3.util.MainThreadInitializedObject;
 import com.android.launcher3.util.Preconditions;
 import com.android.launcher3.util.SecureSettingsObserver;
 
-import com.android.internal.util.crdroid.Utils;
+import com.android.internal.util.colt.ColtUtils;
 
 public class LauncherAppState {
 
@@ -82,7 +82,7 @@ public class LauncherAppState {
         Preconditions.assertUIThread();
         mContext = context;
 
-        setSearchAppAvailable(Utils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
+        setSearchAppAvailable(ColtUtils.isPackageInstalled(context, Utilities.SEARCH_PACKAGE));
 
         mInvariantDeviceProfile = InvariantDeviceProfile.INSTANCE.get(mContext);
         mIconCache = new IconCache(mContext, mInvariantDeviceProfile);
