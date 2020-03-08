@@ -12,6 +12,11 @@
      limitations under the License.
 -->
 <resources>
+
     <!-- Application name -->
     <string name="colt_app_name" translatable="false">ColtOS Launcher</string>
+
+    <!-- Folder titles -->
+    <string name="google_folder_title" translatable="false">Google</string>
+
 </resources>
