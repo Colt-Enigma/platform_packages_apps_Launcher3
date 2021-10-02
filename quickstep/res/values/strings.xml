@@ -266,4 +266,10 @@
     <!-- Kill Apps -->
     <string name="recents_kill_app">Kill app</string>
 
+    <!-- Toast for Clear All, App Locked n Unlocked -->
+    <string name="recents_app_unlocked">App Unlocked</string>
+    <string name="recents_app_locked">App Locked</string>
+    <string name="recents_all_apps_cleared">All Apps Cleared</string>
+    <string name="recents_app_killed">App closed</string>
+
 </resources>

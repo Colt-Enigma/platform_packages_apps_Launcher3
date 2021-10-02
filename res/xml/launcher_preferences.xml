@@ -63,6 +63,13 @@
         android:defaultValue="true"
         android:persistent="true"/>
 
+    <SwitchPreference
+        android:key="pref_action_toast_enabled"
+        android:title="@string/action_toast_enabled_title"
+        android:summary="@string/action_toast_enabled_summary"
+        android:defaultValue="true"
+        android:persistent="true"/>
+
     <Preference
         android:key="pref_developer_options"
         android:persistent="false"
