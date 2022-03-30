@@ -31,6 +31,8 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.content.res.XmlResourceParser;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
@@ -71,7 +73,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class InvariantDeviceProfile {
+public class InvariantDeviceProfile implements OnSharedPreferenceChangeListener {
 
     public static final String TAG = "IDP";
     // We do not need any synchronization for this variable as its only written on UI thread.
@@ -89,6 +91,8 @@ public class InvariantDeviceProfile {
     private static final String KEY_IDP_GRID_NAME = "idp_grid_name";
 
     private static final float ICON_SIZE_DEFINED_IN_APP_DP = 48;
+
+    public static final String KEY_ALLAPPS_THEMED_ICONS = "pref_allapps_themed_icons";
 
     // Constants that affects the interpolation curve between statically defined device profile
     // buckets.
@@ -186,6 +190,8 @@ public class InvariantDeviceProfile {
     public Point defaultWallpaperSize;
     public Rect defaultWidgetPadding;
 
+    private Context mContext;
+
     private final ArrayList<OnIDPChangeListener> mChangeListeners = new ArrayList<>();
 
     @VisibleForTesting
@@ -193,6 +199,10 @@ public class InvariantDeviceProfile {
 
     @TargetApi(23)
     private InvariantDeviceProfile(Context context) {
+        mContext = context;
+
+        SharedPreferences prefs = Utilities.getPrefs(context);
+        prefs.registerOnSharedPreferenceChangeListener(this);
         String gridName = getCurrentGridName(context);
         String newGridName = initGrid(context, gridName);
         if (!newGridName.equals(gridName)) {
@@ -300,6 +310,13 @@ public class InvariantDeviceProfile {
             return TYPE_TABLET;
         } else {
             return TYPE_PHONE;
+        }
+    }
+
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+        if (KEY_ALLAPPS_THEMED_ICONS.equals(key)) {
+            onConfigChanged(mContext);
         }
     }
 
