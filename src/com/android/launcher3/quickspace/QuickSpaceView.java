@@ -103,6 +103,7 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
             mGreetingsExt.setEllipsize(TruncateAt.END);
             mGreetingsExtClock.setVisibility(View.VISIBLE);
             mGreetingsExtClock.setText(mController.getEventController().getClockExt());
+            bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
         }
         if (Utilities.isQuickspacePersonalityEnabled(getContext()) || mController.getEventController().isNowPlaying()) {
             mEventTitle.setEllipsize(TruncateAt.MARQUEE);
@@ -119,17 +120,20 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
                   mEventSubIcon.setVisibility(View.GONE);
                   mEventTitleSubColored.setVisibility(View.VISIBLE);
                   mEventTitleSubColored.setText(getContext().getString(R.string.qe_now_playing_by));
+                  bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
                } else {
                   mEventSubIcon.setVisibility(View.VISIBLE);
                   mEventSubIcon.setImageTintList(mColorStateList);
                   mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
                   mEventTitleSubColored.setText("");
                   mEventTitleSubColored.setVisibility(View.GONE);
+                  bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
                }
             } else {
               mEventSubIcon.setVisibility(View.VISIBLE);
               mEventSubIcon.setImageTintList(mColorStateList);
               mEventSubIcon.setImageResource(mController.getEventController().getActionIcon());
+              bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
             }
         } else {
           mEventTitleSub.setVisibility(View.GONE);
@@ -137,8 +141,8 @@ public class QuickSpaceView extends FrameLayout implements AnimatorUpdateListene
           if (Utilities.useAlternativeQuickspaceUI(getContext())) {
               mEventTitleSubColored.setVisibility(View.GONE);
           }
+          bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
         }
-        bindWeather(mWeatherContentSub, mWeatherTempSub, mWeatherIconSub);
     }
 
     private final void bindWeather(View container, TextView title, ImageView icon) {
