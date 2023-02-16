@@ -20,7 +20,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Application name -->
-    <string name="arrow_app_name" translatable="false">Arrow Launcher</string>
+    <string name="arrow_app_name" translatable="false">ColtOS Launcher</string>
 
     <!-- Folder titles -->
     <string name="google_folder_title" translatable="false">Google</string>
