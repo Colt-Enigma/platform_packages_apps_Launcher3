@@ -146,6 +146,7 @@
 
     <!-- QuickSpace: QuickEvent: Device Intro Event -->
     <string name="quick_event_rom_intro_welcome" translatable="false">Welcome to ColtOS!</string>
+    <string name="quick_event_rom_intro_welcome_ext" translatable="false">ColtOS time!</string>
     <string-array name="welcome_message_variants" translatable="false">
         <item>Have a great day!</item>
         <item>Thank you for flashing ColtOS!</item>
