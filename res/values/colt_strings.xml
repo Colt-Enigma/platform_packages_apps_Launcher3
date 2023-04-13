@@ -159,7 +159,7 @@
 
     <!-- QuickSpace: QuickEvent: Greetings -->
     <string name="quickspace_grt_morning">Good morning.</string>
-    <string name="quickspace_grt_evening">Good evening.</string>
+    <string name="quickspace_grt_evening">Good night.</string>
     <string name="quickspace_grt_afternoon">Good afternoon.</string>
     <string name="quickspace_grt_night">Good night.</string>
     <string name="quickspace_grt_midnight">Solemn midnight.</string>
