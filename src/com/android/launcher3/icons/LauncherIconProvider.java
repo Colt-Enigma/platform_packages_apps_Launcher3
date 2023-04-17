@@ -63,7 +63,7 @@ public class LauncherIconProvider extends IconProvider {
     public void setIconThemeSupported(boolean isSupported) {
         mSupportsIconTheme = isSupported;
         mThemedIconMap = isSupported && FeatureFlags.USE_LOCAL_ICON_OVERRIDES.get()
-                ? getThemedIconMap() : DISABLED_MAP;
+                ? null : DISABLED_MAP;
     }
 
     @Override
