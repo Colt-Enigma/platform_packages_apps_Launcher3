@@ -39,6 +39,7 @@ import com.android.launcher3.util.DisplayController;
 import com.android.launcher3.util.MultiPropertyFactory.MultiProperty;
 import com.android.launcher3.util.MultiValueAlpha;
 import com.android.launcher3.util.NavigationMode;
+import com.android.launcher3.util.ShakeUtils;
 import com.android.launcher3.util.VibratorWrapper;
 import com.android.quickstep.TaskOverlayFactory.OverlayUICallbacks;
 import com.android.quickstep.util.LayoutUtils;
