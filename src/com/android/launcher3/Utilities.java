@@ -540,6 +540,12 @@ public final class Utilities {
         return spanned;
     }
 
+    public static SharedPreferences getPrefs(Context context) {
+        // Use application context for shared preferences, so that we use a single cached instance
+        return context.getApplicationContext().getSharedPreferences(
+                LauncherFiles.SHARED_PREFERENCES_KEY, Context.MODE_PRIVATE);
+    }
+
     /**
      * Prefixes a text with the provided icon
      */
